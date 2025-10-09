@@ -1,15 +1,19 @@
 
 # WinPmem Usage Guide
 
-Version: WinPmem Release 4.0 RC2
+!!!STILL NEED TO SHOW HOW TO LOCATE USB DIRECTORY, AS IS NOT ON C: DRIVE!!!
+!!!STILL NEED TO FIGURE OUT HOW TO OUTPUT THE FILE INTO DIFFERENT DIRECTORY!!!
+!!!SAME WITH AVML!!!
+
+Version: Release 4.0 RC2
 https://github.com/Velocidex/WinPmem/releases/tag/v4.0.rc1
 
-WinPmem is a tool used to aquire a physical memory dump of windows operating systems. 
+WinPmem is a tool used to acquire a physical memory dump of windows operating systems. 
 The WinPmem binaries are located within the Memory Capture/WinPmem directory of the USB drive. 
 Both the x64 and x86 versions are included for each windows system type respectively. 
-The size of the outputted .raw file will be rather large. Ensure enough size is present on the drive before proceeding.
+The size of the outputted .raw file will be rather large. Ensure enough space is present on the drive before proceeding.
 
-# Step-by-step walkthrough
+## Step-by-step walkthrough
 
 The tool can be run from the command line.
 
