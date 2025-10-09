@@ -1,5 +1,5 @@
 
-#   WinPmem Usage Guide
+# WinPmem Usage Guide
 
 Version: WinPmem Release 4.0 RC2
 https://github.com/Velocidex/WinPmem/releases/tag/v4.0.rc1
@@ -13,17 +13,17 @@ The size of the outputted .raw file will be rather large. Ensure enough size is 
 
 The tool can be run from the command line.
 
-- 1. run Command Prompt as administrator
-- 2. in the command line, navigate to the appropriate directory using the cd command
+1. run Command Prompt as administrator
+2. in the command line, navigate to the appropriate directory using the cd command
 (image)
-- 3. write out the following command
+3. write out the following command
 for x64 versions: winpmem_mini_x64_rc2.exe physmem.raw
 for x86 versions: winpmem_mini_x86.exe physmem.raw
 (image)
 the second term in the command is the output files name. You can use any file name desired,
 as long as it ends with .raw
-- 4. run the command and wait for it to complete. This can take several minutes.
-- 5. once the command finishes, in the same folder as the tool will be an outputted .raw file
+4. run the command and wait for it to complete. This can take several minutes.
+5. once the command finishes, in the same folder as the tool will be an outputted .raw file
 containing the physical memory of the system
 (image)
 
@@ -32,7 +32,6 @@ If these steps are completed, a physically memory dump has been acquired for fur
 
 
 ## Troubleshooting
-
 
 
 
