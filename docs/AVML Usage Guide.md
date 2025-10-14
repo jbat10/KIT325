@@ -9,9 +9,6 @@ The AVML binary is located within the Memory Capture/AVML directory of the USB d
 
 The outputted .mem file can be several gigabytes in size, ensure enough space is present before proceeding.
 
-
-did a test run of AVML, got it working
-
 ## Step-by-step walkthrough
 
 
