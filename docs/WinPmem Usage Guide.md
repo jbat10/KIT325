@@ -34,6 +34,7 @@ as long as it ends with .raw
 containing the physical memory of the system
 (image)
 
+The process for running this tool on a USB drive is identical to on the device itself. No changes to the method are necessary. 
 
 If these steps are completed, a physically memory dump has been acquired for further investigation.
 
