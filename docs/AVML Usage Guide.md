@@ -4,7 +4,9 @@ Version: AVML v0.14.0
 https://github.com/microsoft/avml/releases/tag/v0.14.0
 
 AVML, or Acquire Volatile Memory Linux, is a tool to acquire volatile memory from Linux based operating systems. 
+
 The AVML binary is located within the Memory Capture/AVML directory of the USB drive.
+
 The outputted .mem file can be several gigabytes in size, ensure enough space is present before proceeding.
 
 
