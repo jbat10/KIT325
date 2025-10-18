@@ -13,14 +13,6 @@ An output directory is provided for the recovered files, located with the (path 
 
 ## Step-by-step walkthrough
 
-### Windows Version
-
-1. within the (path here) folder on the USB drive, locate the file "photorec_win.exe"
-2. Right click the file and select "Run as Administrator"
-3. A command prompt window will open with the instructions from the tool displayed.
-4. Select the drive partition you wish to search for, using arrow keys and enter to select the displayed options
-5. 
-
 ### Linux Version
 
 The tool can be run from the command line. Once the tool has been opened, the process for running is identical
@@ -31,6 +23,15 @@ to the windows version.
 3. this will display the tool within the terminal interface. (image)
 4. Continue from step 4 of the windows version walkthrough.
 
+### Windows Version
+
+1. within the (path here) folder on the USB drive, locate the file "photorec_win.exe"
+2. Right click the file and select "Run as Administrator"
+3. A command prompt window will open with the instructions from the tool displayed.
+4. Select the drive partition you wish to search for, using arrow keys and enter to select.
+5. Select the filesystem type of the drive. You can *usually* press enter straight away when this prompt appears.
+6. Select whether all the space needs to be searched, or just unallocated space.
+7. Select the directory to save the recovered files to. A directory is provided on the USB drive labelled OutputDir.
 
 If these steps are completed, restored files will be placed within the provided output directory on the USB drive and available for further investigation.
 

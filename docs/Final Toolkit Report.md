@@ -6,14 +6,16 @@
 
 - explain the project here, no need to go into depth
 
-## Tool Selection
+## Rationale for Tool Selection
 
 - explain rationale behind selecting tools
 
 
-### Rationale for the selected memory capture tools
+### WinPmem and AVML
 
 WinPmem and AVML were selected as our memory capturing tools for Windows and Linux systems. Avml was chosen as it stood out as a commercially available and simple to use tool that would suit the needs of the toolkit perfectly, being capturing memory from Linux systems, and outputting it in a suitable file format. Whilst many other options could also have been suitable, AVML was the first selected and passed all tests set for it, so there was no need to trial others. WinPmem on the other hand, was almost the exact opposite. We went to great lengths to find a windows memory capturing tool that was specifically available for commercial use. A great many tools were considered, but could not be used primarily because of licensing concerns, such as FTK Imager, MAGNET RAM, FEX Memory Imager and more. This left us with WinPmem as essentially the only resulting tool we could find so far, however it looked to be suitable for the needs of the toolkit, even if it outputs the resulting memory file in the .raw format.
+
+### Photorec
 
 
 ## Testing Results
@@ -27,6 +29,9 @@ The second main test involved successfully operating the tools from and storing 
 
 !!!SHOULD FURTHER TEST THESE ONCE A LARGER DRIVE IS ACQUIRED!!!
 
+### Photorec
+
+mostly meets testing requirements, just struggling to run from usb
 
 ## Packaging Decisions
 
@@ -36,4 +41,6 @@ The second main test involved successfully operating the tools from and storing 
 
 ## Limitations and Future Recommendations
 
-
+things that could be mentioned
+- running tools from usb could have issues
+- the output of the winpmem run is in .raw format, and would need further work after acquisition to alter the file to a readable format such as .mem. Having this in built in the toolkit could be useful. 
