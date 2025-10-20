@@ -17,6 +17,7 @@ WinPmem and AVML were selected as our memory capturing tools for Windows and Lin
 
 ### Photorec
 
+Photorec was chosen as our designated file carving option for a few key reasons. Firstly, whilst looking around for available options, Photorec appeared to be the standard choice, and commonly appeared amongst the options. It is also an open source tool, letting us use it without licensing concern in this project, and is already an ingest module integrated into autopsy, another tool we plan on using. When looked further into, the tool seemed sufficiently capable for our needs, and worked on both windows and linux operating systems. As such, we chose it to be tested first as our file carving tool. 
 
 ## Testing Results
 
@@ -31,7 +32,12 @@ The second main test involved successfully operating the tools from and storing 
 
 ### Photorec
 
-mostly meets testing requirements, just struggling to run from usb
+From the SPDA document, the main testing criteria for Photorec is for the tool to be able to reconstruct files from unallocated space that match the contents of their original version. Whilst doing this, I also opted to ensure the tool works without issue on both windows and linux systems and when operating from a USB drive instead of the system itself. For the first test, a sample text file was created with an identifiable size and with easily recognizable contents. Once deleted, Photorec was able to recover the file and match it’s original content on both systems without issue, matching the files length and contents.
+![Photorec Test Passed](https://www.https://github.com/jbat10/KIT325/tree/main/docs/Images/PhotorecReportWin.png)
+![Photorec Test Passed](https://www.https://github.com/jbat10/KIT325/tree/main/docs/Images/PhotorecReportLin.png)
+
+
+For the second test, these results largely mirror the memory capture tools with their outcomes. The windows version functioned without issue from the USB drive, however the linux version needed extra modification to work without issue. 
 
 ## Packaging Decisions
 
