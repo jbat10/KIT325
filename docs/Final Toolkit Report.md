@@ -35,7 +35,7 @@ The second main test involved successfully operating the tools from and storing 
 From the SPDA document, the main testing criteria for Photorec is for the tool to be able to reconstruct files from unallocated space that match the contents of their original version. Whilst doing this, I also opted to ensure the tool works without issue on both windows and linux systems and when operating from a USB drive instead of the system itself. For the first test, a sample text file was created with an identifiable size and with easily recognizable contents. Once deleted, Photorec was able to recover the file and match it’s original content on both systems without issue, matching the files length and contents.
 ![Photorec Test Passed](https://github.com/jbat10/KIT325/blob/main/docs/Images/PhotorecReportWin.PNG)
 ![Photorec Test Passed](https://github.com/jbat10/KIT325/blob/main/docs/Images/PhotorecReportLin.PNG)
-
+*Above are the successfully recovered files from Photorec*
 
 For the second test, these results largely mirror the memory capture tools with their outcomes. The windows version functioned without issue from the USB drive, however the linux version needed extra modification to work without issue. 
 

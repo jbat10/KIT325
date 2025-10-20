@@ -9,8 +9,15 @@ The AVML binary is located within the Memory Capture/AVML directory of the USB d
 
 The outputted .mem file can be several gigabytes in size, ensure enough space is present before proceeding.
 
-## Step-by-step walkthrough
+## Using the script
 
+A script is included to run the command for the tool and output it to a MemDump directory in the same location as the script. 
+This script is only for use with AVML when run from a USB drive. Follow the step-by-step walkthrough on running from a mounted USB 
+drive below, however when inputted the command to run the script, instead run: (!!!STILL TODO!!!)
+(image here) !STILL TODO
+
+## Step-by-step walkthrough
+ 
 ### Running directly on the device
 
 1. run Command Prompt as administrator
