@@ -30,11 +30,14 @@ to the windows version.
 1. within the (path here) folder on the USB drive, locate the file "photorec_win.exe"
 2. Right click the file and select "Run as Administrator"
 3. A command prompt window will open with the instructions from the tool displayed.
+
 ![Photorec display](https://github.com/jbat10/KIT325/blob/main/docs/Images/photorecwin.PNG)
+
 4. Select the drive partition you wish to search for, using arrow keys and enter to select.
 5. Select the filesystem type of the drive. You can *usually* press enter straight away when this prompt appears.
 6. Select whether all the space needs to be searched, or just unallocated space.
 7. Select the directory to save the recovered files to. A directory is provided on the USB drive labelled OutputDir.
+
 ![Photorec Output](https://github.com/jbat10/KIT325/blob/main/docs/Images/photorecoutput.PNG)
 
 If these steps are completed, restored files will be placed within the provided output directory on the USB drive and available for further investigation.
