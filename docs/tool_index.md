@@ -14,3 +14,8 @@ Link to github directory: https://github.com/Velocidex/WinPmem
 Version Used: v7.2
 Link to documentation: https://www.cgsecurity.org/wiki/PhotoRec 
 Link to download: https://www.cgsecurity.org/wiki/TestDisk_Download 
+
+### RECmd
+Version Used: 2.1.0
+Link to documentation: https://github.com/EricZimmerman/RECmd
+Link to download: https://ericzimmerman.github.io/#!index.md

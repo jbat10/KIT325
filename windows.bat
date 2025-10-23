@@ -36,7 +36,7 @@ echo Available Forensic Tools:
 echo.
 echo 1. File Carving (PhotoRec)
 echo 2. File Acquisition (ntfstools)
-echo 3. Registry Analysis (RecMD)
+echo 3. Registry Analysis (RECmd)
 echo 4. System Information Collection
 echo 5. Exit
 echo.
@@ -48,7 +48,7 @@ echo Available Forensic Tools:
 echo.
 echo 1. File Carving (PhotoRec)
 echo 2. File Acquisition (ntfstools) 
-echo 3. Registry Analysis (RecMD)
+echo 3. Registry Analysis (RECmd)
 echo 4. System Information Collection
 echo 5. Exit
 echo.
