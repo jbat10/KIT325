@@ -1,0 +1,1 @@
+winpmem_mini_x64_rc2.exe ..\Output\WinPmem\%1

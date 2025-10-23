@@ -5,51 +5,30 @@ https://github.com/microsoft/avml/releases/tag/v0.14.0
 
 AVML, or Acquire Volatile Memory Linux, is a tool to acquire volatile memory from Linux based operating systems. 
 
-The AVML binary is located within the Memory Capture/AVML directory of the USB drive.
+The AVML binary is located within the /ScriptsAndTools directory of the USB drive.
 
 The outputted .mem file can be several gigabytes in size, ensure enough space is present before proceeding.
 
-## Using the script
-
-A script is included to run the command for the tool and output it to a MemDump directory in the same location as the script. 
-This script is only for use with AVML when run from a USB drive. Follow the step-by-step walkthrough on running from a mounted USB 
-drive below, however when inputted the command to run the script, instead run: (!!!STILL TODO!!!)
-(image here) !STILL TODO
+AVML can be run from the master script. If this is desired, please use the Master Script usage guide instead. Below is a walkthrough on how to run the tool on the USB drive without the use of a script.
 
 ## Step-by-step walkthrough
- 
-### Running directly on the device
 
 1. run Command Prompt as administrator
-2. in the command line, navigate to the appropriate directory using the cd command
-(image)
-3. write out the following command: sudo ./avml LinuxMemory.mem
-(image)
-the first term, sudo gives us permission to run the command.
-the second term runs the avml script
-the third term is the output files name. You can use any file name desired, as long as it 
-ends with .mem
-4. run the command and wait for it to complete. 
-5. once the command finishes, in the same folder as the tool will be an outputted .mem file
-containing the physical memory of the system
-(image)
+2. in the command line, navigate to the avml binary directory using the cd command
+3. ensure the avml file is renamed to avml.exe (this will identify it as a file that can be executed)
+4. ensure the usb drive is mounted. if it isn't, find the relevant heading in the troubleshooting section.
+5. run the following command: sudo /lib64/ld-linux-x86-64.so.2 ./avml.exe ../Output/AVML/LinuxMemory.mem (output file name and directory)
 
-### Running from a mounted USB drive
+![WinPmem command normal](https://github.com/jbat10/KIT325/blob/main/docs/Images/commandToRunAVML.PNG)
 
-1. ensure the avml file is renamed to avml.exe (as this will identify it as a file that can be executed)
-2. ensure the usb drive is mounted. if it isn't, find the relevant heading in the troubleshooting section.
-3. run the following command: sudo /lib64/ld-linux-x86-64.so.2 /(path)/(to)/(avml)/(file)/avml.exe LinuxMemory.mem (output file name)
-4. wait for command to finish.
-5. once the command finishes, in the same folder as the tool will be an outputted .mem file containing the captured memory.
-(image)
+6. wait for the command to finish.
+7. once the command finishes, in the output/avml directory, a .mem file containing the captured memory should be present.
 
 If these steps are completed, a memory dumb of the systems volatile memory has been created for further investigation.
 
 ## Troubleshooting
 
-Potentially, the avml file will lack the necessary permissions to be run.
-In order to fix this, apply execute permissions to the file by running: chmod a+x
-If the file is not run as sudo, the user may lack the permission needed to run the file instead. Ensure 
+If the file is not run as sudo, the user will lack the permission needed to run the file. Ensure 
 sudo is present at the start of the command.
 
 ### Mounting a USB drive

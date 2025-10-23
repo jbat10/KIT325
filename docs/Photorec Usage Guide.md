@@ -11,7 +11,7 @@ The files to run are located within the (path here) directory of the USB drive.
 
 An output directory is provided for the recovered files, located with the (path here) directory.
 
-A script was not created for Photorec, as it was not seen as necessary. 
+A script was not created to automate Photorec's running process, however it can still be accessed from the master script. Use the Master Script Usage Guide to see relevant info.
 
 ## Step-by-step walkthrough
 
