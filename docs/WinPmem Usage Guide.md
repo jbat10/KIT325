@@ -1,10 +1,6 @@
 
 # WinPmem Usage Guide
 
-!!!STILL NEED TO SHOW HOW TO LOCATE USB DIRECTORY, AS IS NOT ON C: DRIVE!!!
-!!!STILL NEED TO FIGURE OUT HOW TO OUTPUT THE FILE INTO DIFFERENT DIRECTORY!!!
-!!!SAME WITH AVML!!!
-
 Version: Release 4.0 RC2
 https://github.com/Velocidex/WinPmem/releases/tag/v4.0.rc1
 

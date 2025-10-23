@@ -13,7 +13,7 @@
 
 ### WinPmem and AVML
 
-WinPmem and AVML were selected as our memory capturing tools for Windows and Linux systems. Avml was chosen as it stood out as a commercially available and simple to use tool that would suit the needs of the toolkit perfectly, being capturing memory from Linux systems, and outputting it in a suitable file format. Whilst many other options could also have been suitable, AVML was the first selected and passed all tests set for it, so there was no need to trial others. WinPmem on the other hand, was almost the exact opposite. We went to great lengths to find a windows memory capturing tool that was specifically available for commercial use. A great many tools were considered, but could not be used primarily because of licensing concerns, such as FTK Imager, MAGNET RAM, FEX Memory Imager and more. This left us with WinPmem as essentially the only resulting tool we could find so far, however it looked to be suitable for the needs of the toolkit, even if it outputs the resulting memory file in the .raw format.
+WinPmem and AVML were selected as our memory capturing tools for Windows and Linux systems. AVML was chosen as it stood out as a commercially available and simple to use tool that would suit the needs of the toolkit perfectly, being capturing memory from Linux systems, and outputting it in a suitable file format. Whilst many other options could also have been suitable, AVML was the first selected and passed all tests set for it, so there was no need to trial others. WinPmem on the other hand, was almost the exact opposite. We went to great lengths to find a windows memory capturing tool that was specifically available for commercial use. A great many tools were considered, but could not be used primarily because of licensing concerns, such as FTK Imager, MAGNET RAM, FEX Memory Imager and more. This left us with WinPmem as essentially the only resulting tool we could find so far, however it looked to be suitable for the needs of the toolkit, even if it outputs the resulting memory file in the .raw format.
 
 ### Photorec
 
@@ -45,13 +45,13 @@ the toolkit needed two partitions for the supported OS's. We decided that keepin
 
 ## Usability Observations
 
-social - distribution of the toolkit could lead to unethical use. The toolkit could possibly be used in a social engineering attack to steal sensitive information, the results of which could incur legal reprecussions. 
+The toolkit makes the process of acquiring forensic evidence from physically accessible machines much smoother and easier, whilst providing thorough documentation on the usage and capabilities of the tools contained. This package ensures that the process of acquiring evidence whilst adhering to government or company policies is a more convenient and available process, whether used in fieldwork, for private use or for educational needs. There is the possibility that a bad actor could try and make use of the toolkit to steal sensitive data from a device, however the need for a physically accessible and elevated user account should help to prevent abuse of the toolkit's abilities. 
 
-legal aspects - tools used are freely available and without license, no legal concerns here.
-
-economic - As the toolkit needs to be housed on a USB drive, the cost to make and distribute the toolkit would not be free, harming its usability if the toolkit was to be openly distributed.
+Economically, the tools contained are all open source or freely available, making it more accessible to smaller businesses or individual users who’d lack the resources to pay for higher expense tools. This would also ensure no legal concerns for whoever may use the toolkit, at least in regards to the packaged tools. Alongside being freely available, the documentation provided can help guide less experienced users in using the tools for smaller investigations without having to resort to contracting a professional. 
 
 ## Limitations and Future Recommendations
+
+most tools won't work without running them with elevated permissions (running as administrator on windows, using sudo on Linux), which would heavily limit the functionality of the toolkit on devices without an accessible elevated account. 
 
 WinPmem captures physical memory, but outputs that file in the format of a .raw file. Whilst not ineherently an issue, this would require further effort to turn the file into a readable format, especially if you want it to match the .mem format outputted by AVML. This is not necessarily a fault of the toolkit as it's primary use was acquisition, however with more time, implementing a way to convert this file to a readable format could improve the toolkits functionality. 
 

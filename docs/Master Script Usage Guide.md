@@ -6,7 +6,7 @@ This is located within the /ScriptsAndTools directory of the USB drive on both p
 
 ## Linux Guide
 
-- TODO (script hasn't been written yet sorry)
+- TODO (script isn't finished yet sorry)
 
 ## Windows Guide
 

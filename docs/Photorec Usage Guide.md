@@ -1,7 +1,6 @@
 
 # Photorec Usage Guide
 
-
 Version: TestDisk & PhotoRec 7.2
 https://www.cgsecurity.org/wiki/TestDisk_Download
 
