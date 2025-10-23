@@ -41,12 +41,18 @@ For the second test, these results largely mirror the memory capture tools with 
 
 ## Packaging Decisions
 
+the toolkit needed two partitions for the supported OS's. We decided that keeping the directory structure identical between the two would be more consistent and intuitive for users. Three main folders were made to accomdate documentatoin, scripts and tools, and output locations. The output location itself contains files named after each tool, the documentation folder will contain all the usage guides and the tool index, whilst the scripts and tools will contain all necessary files for the tools and the runnable scripts. 
 
 ## Usability Observations
 
+social - distribution of the toolkit could lead to unethical use. The toolkit could possibly be used in a social engineering attack to steal sensitive information, the results of which could incur legal reprecussions. 
+
+legal aspects - tools used are freely available and without license, no legal concerns here.
+
+economic - As the toolkit needs to be housed on a USB drive, the cost to make and distribute the toolkit would not be free, harming its usability if the toolkit was to be openly distributed.
 
 ## Limitations and Future Recommendations
 
-things that could be mentioned
-- running tools from usb could have issues
-- the output of the winpmem run is in .raw format, and would need further work after acquisition to alter the file to a readable format such as .mem. Having this in built in the toolkit could be useful. 
+WinPmem captures physical memory, but outputs that file in the format of a .raw file. Whilst not ineherently an issue, this would require further effort to turn the file into a readable format, especially if you want it to match the .mem format outputted by AVML. This is not necessarily a fault of the toolkit as it's primary use was acquisition, however with more time, implementing a way to convert this file to a readable format could improve the toolkits functionality. 
+
+In a real world scenario, the outputs of all tools could use up all the storage on the allocated USB drive, causing issues when attempting a full acquisition of forensic evidence, especially if acquiring from a device with multiple drives. A future recommendation would be to use a USB drive with a larger storage to alleviate this issue, however having multiple sets of this toolkit to bring with could also work when multiple drives are involved.

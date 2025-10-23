@@ -31,9 +31,9 @@ If these steps are completed, a memory dumb of the systems volatile memory has b
 If the file is not run as sudo, the user will lack the permission needed to run the file. Ensure 
 sudo is present at the start of the command.
 
-### Mounting a USB drive
+### Mounting a USB drive - THIS PROBABLY DOESNT NEED TO BE HERE
 
-If your device has not automatically mounted when plugged in.
+If your device has not automatically mounted when connected:
 1. find the name of the drive by running: "sudo fdisk -l". 
 2. In the output, locate your device. It will generally be /dev/sdb or /dev/sdb1.
 3. from her, create a mount destination. An empty directory will suffice

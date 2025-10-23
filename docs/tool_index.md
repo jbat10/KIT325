@@ -1,6 +1,6 @@
 # Tool Index
 
-in the case where the documentation and download of the tool are in the same location, only one link is provided.
+In the case where the documentation and download of the tool are in the same location, only one link is provided.
 
 ### AVML - Acquire Volatile Memory Linux
 Version Used: v0.14.0
