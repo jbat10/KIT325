@@ -4,7 +4,7 @@
 
 ## Brief Introduction
 
-- explain the project here, no need to go into depth
+The goal of this project was to create a lightweight, portable forensics toolkit situated on a USB storage device. When defining the scope, we decided to base the toolkit around being acquisition focused, designed to capture evidence in the field and bring it to a larger workstation for further dissemination. For this scope, we outlined the core functionality we needed from tools, being memory capture, disk imaging, registry analysis, file carving, and file acquisition. We also decided on having the toolkit be hybrid focused, with hot and cold tools for both linux and windows systems, requiring us to also create a Linux distro environment for the coldboot side of the drive. This report highlights the finer details of the project, explaining tool selection, testing results in regards to the SPDA document, usability observations, limitations, and future recommendations for the created toolkit.
 
 ## Rationale for Tool Selection
 
@@ -41,7 +41,7 @@ For the second test, these results largely mirror the memory capture tools with 
 
 ## Packaging Decisions
 
-the toolkit needed two partitions for the supported OS's. We decided that keeping the directory structure identical between the two would be more consistent and intuitive for users. Three main folders were made to accomdate documentatoin, scripts and tools, and output locations. The output location itself contains files named after each tool, the documentation folder will contain all the usage guides and the tool index, whilst the scripts and tools will contain all necessary files for the tools and the runnable scripts. 
+the toolkit needed two partitions for the supported OS's. We decided that keeping the directory structure identical between the two would be more consistent and intuitive for users. Three main folders were made to accomodate documentatoin, scripts and tools, and output locations. The output location itself contains files named after each tool, the documentation folder will contain all the usage guides and the tool index, whilst the scripts and tools will contain all necessary files for the tools and the runnable scripts. 
 
 ## Usability Observations
 
