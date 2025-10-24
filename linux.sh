@@ -106,6 +106,7 @@ system_info_menu() {
 }
 
 exit_toolkit() {
+    clear
     exit 0
 }
 

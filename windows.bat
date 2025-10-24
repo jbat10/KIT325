@@ -37,30 +37,33 @@ echo.
 echo 1. File Carving (PhotoRec)
 echo 2. File Acquisition (ntfstools)
 echo 3. Registry Analysis (RECmd)
-echo 4. System Information Collection
-echo 5. Exit
+echo 4. Memory Analysis (WinPmem)
+echo 5. System Information Collection
+echo 6. Exit
 echo.
-set /p choice="Select tool (1-5): "
+set /p choice="Select tool (1-6): "
 goto process_choice
 
 :main_menu_limited
 echo Available Forensic Tools:
 echo.
 echo 1. File Carving (PhotoRec)
-echo 2. File Acquisition (ntfstools) 
+echo 2. File Acquisition (ntfstools)
 echo 3. Registry Analysis (RECmd)
-echo 4. System Information Collection
-echo 5. Exit
+echo 4. Memory Analysis (WinPmem)
+echo 5. System Information Collection
+echo 6. Exit
 echo.
-set /p choice="Select tool (1-5): "
+set /p choice="Select tool (1-6): "
 
 :process_choice
 
 if "%choice%"=="1" goto photorec
 if "%choice%"=="2" goto file_acquisition
 if "%choice%"=="3" goto registry
-if "%choice%"=="4" goto system_info
-if "%choice%"=="5" goto exit
+if "%choice%"=="4" goto memory
+if "%choice%"=="5" goto system_info
+if "%choice%"=="6" goto exit
 echo Invalid choice. Please try again.
 echo.
 
@@ -97,6 +100,15 @@ echo   Registry Analysis
 echo =========================================
 echo.
 call "scripts\windows\registry_analysis.bat"
+goto return_to_menu
+
+:memory
+cls
+echo =========================================
+echo   Memory Analysis
+echo =========================================
+echo.
+call "scripts\windows\MemCapWin.bat"
 goto return_to_menu
 
 :system_info
