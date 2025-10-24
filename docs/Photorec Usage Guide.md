@@ -10,7 +10,7 @@ The files to run are located within the (path here) directory of the USB drive.
 
 An output directory is provided for the recovered files, located with the (path here) directory.
 
-A script was not created to automate Photorec's running process, however it can still be accessed from the master script. Use the Master Script Usage Guide to see relevant info.
+Photorec can be run from the master script. If this is desired, please use the Master Script usage guide instead. Below is a walkthrough on how to run the tool on the USB drive without the use of a script.
 
 ## Step-by-step walkthrough
 
@@ -19,7 +19,7 @@ A script was not created to automate Photorec's running process, however it can 
 The tool can be run from the command line. Once the tool has been opened, the process for running is identical
 to the windows version.
 
-1. Open terminal and locate the "photorec_static" file within the linux section of the USB drive.
+1. Open terminal and locate the "photorec_static.exe" file within the linux section of the USB drive.
 2. Run the tool with the command "./photorec_static"
 3. this will display the tool within the terminal interface. See the corrosponding image under step 3 of the windows version walkthough.
 4. Continue from step 4 of the windows version walkthrough.
