@@ -30,23 +30,3 @@ If these steps are completed, a memory dumb of the systems volatile memory has b
 
 If the file is not run as sudo, the user will lack the permission needed to run the file. Ensure 
 sudo is present at the start of the command.
-
-### Mounting a USB drive - THIS PROBABLY DOESNT NEED TO BE HERE
-
-If your device has not automatically mounted when connected:
-1. find the name of the drive by running: "sudo fdisk -l". 
-2. In the output, locate your device. It will generally be /dev/sdb or /dev/sdb1.
-3. from her, create a mount destination. An empty directory will suffice
-4. run the command: "sudo mount /dev/sdb (name of drive) /media/usb (mount point directory)
-5. The device has now been mounted. use this pathway when executing avml from the drive.
-
-
-### Finding mounted device path
-
-Mounted devices are usually found within the /media pathway. You can run the command: cat /proc/mounts to find the pathway of this device. 
-
-
-
-## References
-
-help with mounting USB drive: https://askubuntu.com/questions/37767/how-to-access-a-usb-flash-drive-from-the-terminal 

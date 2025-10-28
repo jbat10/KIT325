@@ -1,10 +1,6 @@
 
 # WinPmem Usage Guide
 
-!!!STILL NEED TO SHOW HOW TO LOCATE USB DIRECTORY, AS IS NOT ON C: DRIVE!!!
-!!!STILL NEED TO FIGURE OUT HOW TO OUTPUT THE FILE INTO DIFFERENT DIRECTORY!!!
-!!!SAME WITH AVML!!!
-
 Version: Release 4.0 RC2
 https://github.com/Velocidex/WinPmem/releases/tag/v4.0.rc1
 
@@ -39,8 +35,6 @@ as long as it ends with .raw
 containing the physical memory of the system.
 
 ![WinPmem ouput](https://github.com/jbat10/KIT325/blob/main/docs/Images/winpmemoutput.PNG)
-
-The process for running this tool on a USB drive is identical to on the device itself. No changes to the method are necessary. 
 
 If these steps are completed, a physically memory dump has been acquired for further investigation.
 
