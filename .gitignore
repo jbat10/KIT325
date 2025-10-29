@@ -1,3 +1,4 @@
 output/
 photorec.se2
-tools/
+tools/linux/*
+tools/windows/*
