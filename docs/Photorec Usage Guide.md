@@ -42,8 +42,6 @@ to the windows version.
 If these steps are completed, restored files will be placed within the provided output directory on the USB drive and available for further investigation.
 
 
-## Troubleshooting
-
 
 
 

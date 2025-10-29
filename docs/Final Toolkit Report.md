@@ -28,7 +28,7 @@ Our testing criteria for the memory capturing tools involved two main tests to p
 
 The second main test involved successfully operating the tools from and storing the outputted memory files on a mounted USB drive. As I lack access to larger USB drives at the moment of testing, a 4gb USB was used, and the tools were only checked to have started creating a memory file instead of creating a full size file. For this test, WinPmem worked without issue, successfully running on and creating an output file on a USB drive, up until the drive ran out of space. AVML however had initial complications, specifically around execute permissions being different between the linux system and the window’s like formatting of the drive. With some troubleshooting and work arounds, we found a way to get the tool working again. By changing the avml file to avml.exe, the drive recognizes it as an executable and gives it permission to be run as such. Adding the dynamic linker (/lib64/ld-linux-x86-64.so.2) to the command was also necessary to ensure the executable functioned correctly. With these changes, AVML was also able to create a .mem file of captured image up until again, the drive ran out of storage. 
 
-!!!SHOULD FURTHER TEST THESE ONCE A LARGER DRIVE IS ACQUIRED!!!
+A final test was included based on a suggestion from the second progress meeting. This test includes checking that the outputted .mem and .raw files are actually readable by memory analysis tools, and are useful for further examination. For this test, volatility 3 was used to examine the files from both avml and winpmem. When running a simple windows.info check on both the .mem and .raw files, the tool correctly read and displayed information on the contents of these memory files, showing that they were suitable for use.
 
 ### Photorec
 
@@ -52,7 +52,5 @@ Economically, the tools contained are all open source or freely available, makin
 ## Limitations and Future Recommendations
 
 most tools won't work without running them with elevated permissions (running as administrator on windows, using sudo on Linux), which would heavily limit the functionality of the toolkit on devices without an accessible elevated account. 
-
-WinPmem captures physical memory, but outputs that file in the format of a .raw file. Whilst not ineherently an issue, this would require further effort to turn the file into a readable format, especially if you want it to match the .mem format outputted by AVML. This is not necessarily a fault of the toolkit as it's primary use was acquisition, however with more time, implementing a way to convert this file to a readable format could improve the toolkits functionality. 
 
 In a real world scenario, the outputs of all tools could use up all the storage on the allocated USB drive, causing issues when attempting a full acquisition of forensic evidence, especially if acquiring from a device with multiple drives. A future recommendation would be to use a USB drive with a larger storage to alleviate this issue, however having multiple sets of this toolkit to bring with could also work when multiple drives are involved.
