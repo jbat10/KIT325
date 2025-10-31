@@ -35,8 +35,5 @@ Installation guide for forensic tools. Download each tool and place in the speci
 
 ### .NET Runtime (Required for RECmd on Linux)
 **Version:** 9.0.2  
-**Download:** https://dotnet.microsoft.com/en-us/download/dotnet/9.0  
+**Download:** https://dotnet.microsoft.com/en-us/download/dotnet/9.0 (Download the Windows **Binaries**, not the installer.)
 **Install Path:** `tools/linux/dotnet/` (extract runtime files here)  
-**Quick Install:**
-- PowerShell: `iex "& { $(irm https://dot.net/v1/dotnet-install.ps1) }"`
-- Bash: `bash <(curl -sSL https://builds.dotnet.microsoft.com/dotnet/scripts/v1/dotnet-install.sh)`
