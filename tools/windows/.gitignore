@@ -3,3 +3,7 @@
 
 # Except this .gitignore file
 !.gitignore
+
+# Except RECmd portable batch file
+!RECmd/
+!RECmd/recmd_portable.bat
