@@ -19,7 +19,7 @@ WinPmem can be run from the master script. If this is desired, please use the Ma
 The tool can be run from the command line.
 
 1. run Command Prompt as administrator
-2. in the command line, navigate to the /ScriptsAndTools directory.
+2. in the command line, navigate to the /tools/windows directory.
 3. write out the following command:
 
 for x64 versions: winpmem_mini_x64_rc2.exe ../Output/WinPmem/physmem.raw

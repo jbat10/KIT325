@@ -1,37 +1,42 @@
 # Tool Index
 
-In the case where the documentation and download of the tool are in the same location, only one link is provided.
+Installation guide for forensic tools. Download each tool and place in the specified directory within the toolkit.
 
 ### AVML - Acquire Volatile Memory Linux
-Version Used: v0.14.0
-Link to github directory: https://github.com/microsoft/avml
-> #### Install instructions
-> Place avml executable in tools/linux
+**Version:** v0.14.0  
+**Download:** https://github.com/microsoft/avml/releases  
+**Install Path:** `tools/linux/avml` (executable file)
 
 ### WinPmem
-Version Used: Release 4.0 RC2
-Link to github directory: https://github.com/Velocidex/WinPmem
-> #### Install instructions
-> Rename the winpmem executable to winpmem.exe and place it in tools/windows
+**Version:** Release 4.0 RC2  
+**Download:** https://github.com/Velocidex/WinPmem/releases  
+**Install Path:** `tools/windows/winpmem.exe` (rename executable to winpmem.exe)
 
-### Photorec 
-Version Used: v7.2
-Link to documentation: https://www.cgsecurity.org/wiki/PhotoRec 
-Link to download: https://www.cgsecurity.org/wiki/TestDisk_Download 
-> #### Install instructions
-> Linux: Place testdisk folder in tools/linux/testdisk
-> Windows: Place testdisk_win folder in tools/windows/testdisk_win
+### PhotoRec 
+**Version:** v7.2  
+**Documentation:** https://www.cgsecurity.org/wiki/PhotoRec  
+**Download:** https://www.cgsecurity.org/wiki/TestDisk_Download  
+**Install Paths:**
+- Linux: Extract to `tools/linux/testdisk/` (keep folder structure)
+- Windows: Extract to `tools/windows/testdisk_win/` (keep folder structure)
 
-### RECmd
-Version Used: 2.1.0
-Link to documentation: https://github.com/EricZimmerman/RECmd
-Link to download: https://ericzimmerman.github.io/#!index.md
-> #### Install instructions
-> Place RECmd folder in tools/windows/RECmd
+### ntfstool (Windows File Acquisition)
+**Version:** Latest  
+**Download:** https://github.com/thewhiteninja/ntfstool/releases  
+**Install Paths:**
+- `tools/windows/ntfstool.x64.exe` (64-bit version)
+- `tools/windows/ntfstool.x86.exe` (32-bit version)
 
-### .NET Core SDK (Required for RECmd)
-Version Used: 9.0.10
-Link to documentation and download: https://dotnet.microsoft.com/en-us/download/dotnet/9.0
-> #### Install instructions
-> Powershell command to install: `iex "& { $(irm https://dot.net/v1/dotnet-install.ps1) }"`
-> Bash command to install: `bash <(curl -sSL https://builds.dotnet.microsoft.com/dotnet/scripts/v1/dotnet-install.sh)`
+### RECmd (Registry Analysis)
+**Version:** 2.1.0  
+**Download:** https://ericzimmerman.github.io/#!index.md  
+**Documentation:** https://github.com/EricZimmerman/RECmd  
+**Install Path:** Extract entire folder to `tools/windows/RECmd/` (must include BatchExamples and Plugins subdirectories)
+
+### .NET Runtime (Required for RECmd on Linux)
+**Version:** 9.0.2  
+**Download:** https://dotnet.microsoft.com/en-us/download/dotnet/9.0  
+**Install Path:** `tools/linux/dotnet/` (extract runtime files here)  
+**Quick Install:**
+- PowerShell: `iex "& { $(irm https://dot.net/v1/dotnet-install.ps1) }"`
+- Bash: `bash <(curl -sSL https://builds.dotnet.microsoft.com/dotnet/scripts/v1/dotnet-install.sh)`
