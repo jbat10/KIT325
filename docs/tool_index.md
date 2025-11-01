@@ -37,3 +37,15 @@ Installation guide for forensic tools. Download each tool and place in the speci
 **Version:** 9.0.2  
 **Download:** https://dotnet.microsoft.com/en-us/download/dotnet/9.0 (Download the Windows **Binaries**, not the installer.)
 **Install Path:** `tools/windows/dotnet/` (extract runtime files here)  
+
+### Guymager (Offline Full-Disk Imaging)
+**Version:** 0.8.13
+**Download:** https://packages.debian.org/stable/guymager
+**Documentation:** https://guymager.sourceforge.io/
+**Install Path:** /usr/bin/guymager (preinstalled, managed by package manager)
+
+### Autopsy (Offline Analysis and Extraction)
+**Version:** 4.22.1
+**Download:** https://github.com/sleuthkit/autopsy/releases
+**Documentation:** https://sleuthkit.org/autopsy/docs/user-docs/4.22.0//
+**Install Path:** /home/investigator/Autopsy (preinstalled)
