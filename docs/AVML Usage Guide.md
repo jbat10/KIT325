@@ -5,8 +5,6 @@ https://github.com/microsoft/avml/releases/tag/v0.14.0
 
 AVML, or Acquire Volatile Memory Linux, is a tool to acquire volatile memory from Linux based operating systems. 
 
-The AVML binary is located within the /ScriptsAndTools directory of the USB drive.
-
 The outputted .mem file can be several gigabytes in size, ensure enough space is present before proceeding.
 
 AVML can be run from the master script. If this is desired, please use the Master Script usage guide instead. Below is a walkthrough on how to run the tool on the USB drive without the use of a script.
@@ -14,7 +12,7 @@ AVML can be run from the master script. If this is desired, please use the Maste
 ## Step-by-step walkthrough
 
 1. run Command Prompt as administrator
-2. in the command line, navigate to the avml binary directory using the cd command
+2. in the command line, navigate to the avml binary directory using the cd command (within the tools directory)
 3. ensure the avml file is renamed to avml.exe (this will identify it as a file that can be executed)
 4. ensure the usb drive is mounted. if it isn't, find the relevant heading in the troubleshooting section.
 5. run the following command: sudo /lib64/ld-linux-x86-64.so.2 ./avml.exe ../Output/AVML/LinuxMemory.mem (output file name and directory)

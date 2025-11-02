@@ -8,8 +8,6 @@ The goal of this project was to create a lightweight, portable forensics toolkit
 
 ## Rationale for Tool Selection
 
-- explain rationale behind selecting tools
-
 
 ### WinPmem and AVML
 
