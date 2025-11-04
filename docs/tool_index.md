@@ -34,7 +34,7 @@ Installation guide for forensic tools. Download each tool and place in the speci
 **Install Path:** Extract entire folder to `tools/windows/RECmd/` (must include BatchExamples and Plugins subdirectories)
 
 ### .NET Runtime (Required for RECmd on Windows)
-**Version:** 9.0.2  
+**Version:** 9.0.10 
 **Download:** https://dotnet.microsoft.com/en-us/download/dotnet/9.0 (Download the Windows **Binaries**, not the installer.)
 **Install Path:** `tools/windows/dotnet/` (extract runtime files here)  
 
