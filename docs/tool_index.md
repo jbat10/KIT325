@@ -1,6 +1,9 @@
 # Tool Index
 
-Installation guide for forensic tools. Download each tool and place in the specified directory within the toolkit.
+Record of included tools and dependencies.
+
+
+## Live Partition
 
 ### AVML - Acquire Volatile Memory Linux
 **Version:** v0.14.0  
@@ -38,6 +41,8 @@ Installation guide for forensic tools. Download each tool and place in the speci
 **Download:** https://dotnet.microsoft.com/en-us/download/dotnet/9.0 (Download the Windows **Binaries**, not the installer.)
 **Install Path:** `tools/windows/dotnet/` (extract runtime files here)  
 
+## Bootable Partition
+
 ### Guymager (Offline Full-Disk Imaging)
 **Version:** 0.8.13
 **Download:** https://packages.debian.org/stable/guymager
@@ -49,3 +54,21 @@ Installation guide for forensic tools. Download each tool and place in the speci
 **Download:** https://github.com/sleuthkit/autopsy/releases
 **Documentation:** https://sleuthkit.org/autopsy/docs/user-docs/4.22.0//
 **Install Path:** /home/investigator/Autopsy (preinstalled)
+
+### Sleuth Kit (Required by Autopsy)
+**Version:** 4.14.0
+**Download:** https://github.com/sleuthkit/sleuthkit/releases
+**Documentation:** https://sleuthkit.org/sleuthkit/docs/
+**Install Path:**  (preinstalled)
+
+### Temurin JDK (Required by Autopsy)
+**Version:** 17.0.17
+**Download:** https://adoptium.net/temurin/releases/
+**Documentation:** https://adoptium.net/installation
+**Install Path:** /opt/java17 (preinstalled)
+
+### Other Packages Installed from Debian Repositories
+- testdisk
+- git
+- unzip
+- exfatprogs
