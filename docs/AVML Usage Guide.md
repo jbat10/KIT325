@@ -13,20 +13,17 @@ AVML can be run from the master script. If this is desired, please use the Maste
 
 1. run Command Prompt as administrator
 2. in the command line, navigate to the avml binary directory using the cd command (within the tools directory)
-3. ensure the avml file is renamed to avml.exe (this will identify it as a file that can be executed)
-4. ensure the usb drive is mounted. if it isn't, find the relevant heading in the troubleshooting section.
-5. run the following command: sudo /lib64/ld-linux-x86-64.so.2 ./avml.exe ../Output/AVML/LinuxMemory.mem (output file name and directory)
+3. run the following command: sudo /lib64/ld-linux-x86-64.so.2 ./avml.exe ../output/AVML/LinuxMemory.mem (output file name and directory)
 
-This command will function for drives on fat32, however is not necessary for drives formatted with exfat. running the command as *./avml (output file name and directory)* should work on these drives.
+![AVML command normal](./Images/commandToRunAVML.PNG)
 
-![WinPmem command normal](https://github.com/jbat10/KIT325/blob/main/docs/Images/commandToRunAVML.PNG)
+4. wait for the command to finish.
+5. once the command finishes, in the output/avml directory, a .mem file containing the captured memory should be present.
 
-6. wait for the command to finish.
-7. once the command finishes, in the output/avml directory, a .mem file containing the captured memory should be present.
-
-If these steps are completed, a memory dumb of the systems volatile memory has been created for further investigation.
+If these steps are completed, a memory dump of the systems volatile memory has been created for further investigation.
 
 ## Troubleshooting
 
-If the file is not run as sudo, the user will lack the permission needed to run the file. Ensure 
-sudo is present at the start of the command.
+If the file is not run as root or using sudo, the user will lack the permission needed to acquire memory. Ensure 'sudo' is present at the start of the command or that the current user is root.
+
+If a 'partial install' has been used instead of a full install, and the USB was formatted to FAT32 instead of ExFAT, two problems will likely occur. One, the AVML binary may not be executable, as FAT32 does not have permission bits. This has been partially worked around by renaming the binary to avml.exe, but the drive must still be mounted with the 'showexec' option. Two, FAT32 has a 4GB limit on file sizes, preventing memory dumps larger than this. In this case, reformat the drive and reinstall the toolkit.

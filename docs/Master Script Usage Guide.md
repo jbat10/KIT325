@@ -86,7 +86,6 @@ All outputs are saved to timestamped directories in `output/` for easy organisat
 
 `sudo bash linux.sh`
 
-`sudo ./linux.bat`
 
 ### Features
 

@@ -24,7 +24,7 @@ Record of included tools and dependencies.
 - Windows: Extract to `tools/windows/testdisk_win/` (keep folder structure)
 
 ### ntfstool (Windows File Acquisition)
-**Version:** Latest  
+**Version:** v1.7  
 **Download:** https://github.com/thewhiteninja/ntfstool/releases  
 **Install Paths:**
 - `tools/windows/ntfstool.x64.exe` (64-bit version)
