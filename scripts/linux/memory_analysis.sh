@@ -7,27 +7,6 @@ TOOLKIT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 TOOLS_DIR="$TOOLKIT_ROOT/tools"
 OUTPUT_DIR="$TOOLKIT_ROOT/output"
 
-echo "Memory Analysis Tool"
-echo "==================="
-echo
-
-echo "Select memory analysis option:"
-echo
-echo "1. Memory Acquisition (AVML)"
-echo "2. Live Memory Analysis"
-echo "3. Process Memory Dump"
-echo "4. Return to main menu"
-echo
-read -p "Select option (1-4): " mem_choice
-
-case $mem_choice in
-    1) memory_acquisition ;;
-    2) live_analysis ;;
-    3) process_dump ;;
-    4) return 0 ;;
-    *) echo "Invalid choice."; return 1 ;;
-esac
-
 memory_acquisition() {
     clear
     echo "Memory Acquisition (AVML)"
@@ -35,17 +14,17 @@ memory_acquisition() {
     echo
     
     # Check for AVML
-    if [ ! -x "$TOOLS_DIR/avml" ] && ! command -v avml &> /dev/null; then
+    if [ ! -x "$TOOLS_DIR/linux/avml" ] && ! command -v avml &> /dev/null; then
         echo "[ERROR] AVML not found."
-        echo "Please place the AVML binary in $TOOLS_DIR/ or install it system-wide."
+        echo "Please place the AVML binary in $TOOLS_DIR/linux/ or install it system-wide."
         echo "AVML can be downloaded from: https://github.com/microsoft/avml"
         read -p "Press Enter to continue..."
         return 1
     fi
     
     # Determine AVML command
-    if [ -x "$TOOLS_DIR/avml" ]; then
-        AVML_CMD="$TOOLS_DIR/avml"
+    if [ -x "$TOOLS_DIR/linux/avml" ]; then
+        AVML_CMD="$TOOLS_DIR/linux/avml"
     else
         AVML_CMD="avml"
     fi
@@ -57,10 +36,11 @@ memory_acquisition() {
     echo "Output file: $MEMORY_FILE"
     echo
     echo "This process may take several minutes depending on system memory size."
+    echo "Note: This operation requires root privileges."
     read -p "Press Enter to continue or Ctrl+C to cancel..."
     
-    # Run AVML
-    $AVML_CMD "$MEMORY_FILE"
+    # Run AVML with sudo
+    sudo $AVML_CMD "$MEMORY_FILE"
     
     if [ $? -eq 0 ]; then
         echo
@@ -200,3 +180,24 @@ process_dump() {
     echo "Process dump completed: $DUMP_DIR"
     read -p "Press Enter to continue..."
 }
+
+echo "Memory Analysis Tool"
+echo "==================="
+echo
+
+echo "Select memory analysis option:"
+echo
+echo "1. Memory Acquisition (AVML)"
+echo "2. Live Memory Analysis"
+echo "3. Process Memory Dump"
+echo "4. Return to main menu"
+echo
+read -p "Select option (1-4): " mem_choice
+
+case $mem_choice in
+    1) memory_acquisition ;;
+    2) live_analysis ;;
+    3) process_dump ;;
+    4) return 0 ;;
+    *) echo "Invalid choice."; return 1 ;;
+esac
