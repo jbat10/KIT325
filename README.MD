@@ -9,11 +9,13 @@ To perform a partial install, format a USB flash drive to ExFAT and clone this r
 
 ## Quick Start
 
-Run the master script for your platform:
+On a live system, run the master script for your platform:
 - **Windows:** `windows.bat` (run as Administrator)
 - **Linux:** `sudo bash linux.sh`
 
 [📖 Master Script Usage Guide](docs/Master%20Script%20Usage%20Guide.md)
+
+To access the bootable toolkit OS, select the USB drive from the computer's boot menu and log in with username and password 'investigator'.
 
 ## Documentation
 
