@@ -3,7 +3,7 @@
 Version: 4.22.1
 https://github.com/sleuthkit/autopsy/releases
 
-Autopsy is a digital forensics suite designed to search and analyse .
+Autopsy is a digital forensics suite designed to search and analyse data sources. It is able to recover deleted files, analyse Windows registry hives, detect encrypted data and more.
 
 Autopsy is accessible from a desktop shortcut on the bootable Linux environment of the drive. The user password ('investigator') will be requested to allow running with access to disks.
 
