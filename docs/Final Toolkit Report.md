@@ -39,7 +39,7 @@ For the second test, these results largely mirror the memory capture tools with 
 
 ## Packaging Decisions
 
-the toolkit needed two partitions for the supported OS's. We decided that keeping the directory structure identical between the two would be more consistent and intuitive for users. Three main folders were made to accomodate documentatoin, scripts and tools, and output locations. The output location itself contains files named after each tool, the documentation folder will contain all the usage guides and the tool index, whilst the scripts and tools will contain all necessary files for the tools and the runnable scripts. 
+the toolkit needed two partitions for the supported OS's. We decided that keeping the directory structure identical between the two would be more consistent and intuitive for users. Four main folders were made to accomodate documentation, scripts, tools, and output locations. The output location itself contains files named after each tool, the documentation folder will contain all the usage guides and the tool index, whilst the scripts and tools will contain all necessary files for the tools and the runnable scripts. 
 
 ## Usability Observations
 
@@ -51,4 +51,4 @@ Economically, the tools contained are all open source or freely available, makin
 
 most tools won't work without running them with elevated permissions (running as administrator on windows, using sudo on Linux), which would heavily limit the functionality of the toolkit on devices without an accessible elevated account. 
 
-In a real world scenario, the outputs of all tools could use up all the storage on the allocated USB drive, causing issues when attempting a full acquisition of forensic evidence, especially if acquiring from a device with multiple drives. A future recommendation would be to use a USB drive with a larger storage to alleviate this issue, however having multiple sets of this toolkit to bring with could also work when multiple drives are involved.
+In a real world scenario, the outputs of all tools could use up all the storage on the allocated USB drive, causing issues when attempting a full acquisition of forensic evidence, especially if acquiring from a device with multiple drives. A future recommendation would be to use a USB drive with a larger storage to alleviate this issue, however having multiple sets of this toolkit could also work.

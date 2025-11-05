@@ -17,6 +17,8 @@ AVML can be run from the master script. If this is desired, please use the Maste
 4. ensure the usb drive is mounted. if it isn't, find the relevant heading in the troubleshooting section.
 5. run the following command: sudo /lib64/ld-linux-x86-64.so.2 ./avml.exe ../Output/AVML/LinuxMemory.mem (output file name and directory)
 
+This command will function for drives on fat32, however is not necessary for drives formatted with exfat. running the command as *./avml (output file name and directory)* should work on these drives.
+
 ![WinPmem command normal](https://github.com/jbat10/KIT325/blob/main/docs/Images/commandToRunAVML.PNG)
 
 6. wait for the command to finish.
