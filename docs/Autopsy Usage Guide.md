@@ -24,7 +24,7 @@ Work is stored in a "case", using a directory tree and database. Exported files 
 
 ![autopsy ingest modules](./Images/autopsyingest.png)
 
-5. Once the ingest modules have finished, your next steps will depend on both your investigation goals and findings on the target machine; Consult the [https://sleuthkit.org/autopsy/docs/user-docs/4.22.0//](official autopsy documentation) for further pointers.
+5. Once the ingest modules have finished, your next steps will depend on both your investigation goals and findings on the target machine; Consult the [official autopsy documentation](https://sleuthkit.org/autopsy/docs/user-docs/4.22.0//) for further pointers.
 
 6. One common task will be exporting files from the target machine. To do this, browse through the data source in the file tree on the left to locate target files, then right-click the desired file and select 'Export file'. Exported files can be found in the 'Export' folder of the case.
 
