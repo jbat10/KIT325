@@ -59,7 +59,7 @@ Record of included tools and dependencies.
 **Version:** 4.14.0
 **Download:** https://github.com/sleuthkit/sleuthkit/releases
 **Documentation:** https://sleuthkit.org/sleuthkit/docs/
-**Install Path:**  (preinstalled)
+**Install Path:** /usr/share/java (preinstalled)
 
 ### Temurin JDK (Required by Autopsy)
 **Version:** 17.0.17
