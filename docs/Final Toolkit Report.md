@@ -55,7 +55,7 @@ In testing the bootable environment, Guymager was able to create a dd image of a
 
 ### Distribution
 
-After flashing the raw disk image of the bootable environment to a suitable USB drive using Balena Etcher, the toolkit could be booted. The installer script was able to create a new, labelled ExFAT partition in the remaining space on the drive containing this git repo, and the downloader script successfully downloaded and unpacked all remaining tools into their respective folders. This is verifiable by viewing the partition layout with the "lsblk" command on Linux or the Windows Partition Viewer, and inspecting the folder structure to verify all expected files are present.
+After flashing the raw disk image of the bootable environment to a suitable USB drive using Balena Etcher, the toolkit could be booted. The installer script was able to create a new, labelled ExFAT partition in the remaining space on the drive containing this git repo, and the downloader script successfully downloaded and unpacked all remaining tools into their respective folders. This is verifiable by viewing the partition layout with the "lsblk" command on Linux or the Windows Partition Viewer, and inspecting the folder structure to verify all expected files are present. After an initial install on a USB 2.0 drive it was discovered that such a drive is too slow to properly operate a graphical desktop environment; A note was added to the README clarifying minimum drive specifications.
 
 ![partition layout after install](./Images/partitions.png)
 
