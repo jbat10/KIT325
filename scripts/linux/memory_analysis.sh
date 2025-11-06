@@ -9,9 +9,6 @@ OUTPUT_DIR="$TOOLKIT_ROOT/output"
 
 memory_acquisition() {
     clear
-    echo "Memory Acquisition (AVML)"
-    echo "========================"
-    echo
     
     # Check for AVML
     if [ ! -x "$TOOLS_DIR/linux/avml" ] && ! command -v avml &> /dev/null; then
@@ -181,23 +178,28 @@ process_dump() {
     read -p "Press Enter to continue..."
 }
 
-echo "Memory Analysis Tool"
-echo "==================="
-echo
+show_menu() {
+    clear
+    echo "Memory Analysis Tool"
+    echo "==================="
+    echo
+    
+    echo "Select memory analysis option:"
+    echo
+    echo "1. Memory Acquisition (AVML)"
+    echo "2. Live Memory Analysis"
+    echo "3. Process Memory Dump"
+    echo "4. Return to main menu"
+    echo
+    read -p "Select option (1-4): " mem_choice
+    
+    case $mem_choice in
+        1) memory_acquisition; show_menu ;;
+        2) live_analysis; show_menu ;;
+        3) process_dump; show_menu ;;
+        4) clear; exit 0 ;;
+        *) echo "Invalid choice. Please try again."; echo; sleep 1; show_menu ;;
+    esac
+}
 
-echo "Select memory analysis option:"
-echo
-echo "1. Memory Acquisition (AVML)"
-echo "2. Live Memory Analysis"
-echo "3. Process Memory Dump"
-echo "4. Return to main menu"
-echo
-read -p "Select option (1-4): " mem_choice
-
-case $mem_choice in
-    1) memory_acquisition ;;
-    2) live_analysis ;;
-    3) process_dump ;;
-    4) return 0 ;;
-    *) echo "Invalid choice."; return 1 ;;
-esac
+show_menu

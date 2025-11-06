@@ -30,5 +30,6 @@ echo.
 echo PhotoRec has been closed.
 echo Results saved to: %SESSION_DIR%
 pause
+cls
 exit /b 0
 

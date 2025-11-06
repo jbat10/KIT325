@@ -33,7 +33,10 @@ if "%acq_choice%"=="1" goto file_extraction
 if "%acq_choice%"=="2" goto mft_analysis
 if "%acq_choice%"=="3" goto streams_analysis
 if "%acq_choice%"=="4" goto undelete_files
-if "%acq_choice%"=="5" exit /b 0
+if "%acq_choice%"=="5" (
+    cls
+    exit /b 0
+)
 echo Invalid choice. Please try again.
 goto menu
 

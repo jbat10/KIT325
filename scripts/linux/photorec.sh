@@ -27,4 +27,5 @@ clear
 echo "PhotoRec has been closed."
 echo "Results saved to: $SESSION_DIR"
 read -p "Press any key to continue..."
+clear
 exit 0

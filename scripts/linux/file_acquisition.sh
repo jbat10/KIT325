@@ -7,10 +7,6 @@ TOOLKIT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 TOOLS_DIR="$TOOLKIT_ROOT/tools"
 OUTPUT_DIR="$TOOLKIT_ROOT/output"
 
-echo "File Acquisition Tool"
-echo "===================="
-echo
-
 show_menu() {
     echo "Select acquisition method:"
     echo
@@ -22,11 +18,11 @@ show_menu() {
     read -p "Select option (1-4): " acq_choice
     
     case $acq_choice in
-        1) disk_image ;;
-        2) file_extraction ;;
-        3) filesystem_analysis ;;
-        4) return 0 ;;
-        *) echo "Invalid choice. Please try again."; echo ;;
+        1) disk_image; show_menu ;;
+        2) file_extraction; show_menu ;;
+        3) filesystem_analysis; show_menu ;;
+        4) clear; exit 0 ;;
+        *) echo "Invalid choice. Please try again."; echo; show_menu ;;
     esac
 }
 
@@ -239,7 +235,5 @@ filesystem_analysis() {
     read -p "Press Enter to continue..."
 }
 
-# Main loop
-while true; do
-    show_menu
-done
+# Main entry point
+show_menu

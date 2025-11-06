@@ -161,3 +161,4 @@ echo Comprehensive system information collection completed!
 echo Results saved to: %SYSINFO_DIR%
 echo.
 pause
+cls

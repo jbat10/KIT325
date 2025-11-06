@@ -9,10 +9,6 @@ set TOOLS_DIR=%TOOLKIT_ROOT%\tools
 set OUTPUT_DIR=%TOOLKIT_ROOT%\output
 set RECMD_PATH=%TOOLS_DIR%\windows\RECmd\recmd_portable.bat
 
-echo Registry Analysis Tool (RecMD)
-echo ==============================
-echo.
-
 :menu
 echo Select registry analysis option:
 echo.
@@ -28,7 +24,10 @@ if "%reg_choice%"=="1" goto live_analysis
 if "%reg_choice%"=="2" goto hive_analysis
 if "%reg_choice%"=="3" goto triage_analysis
 if "%reg_choice%"=="4" goto export_keys
-if "%reg_choice%"=="5" exit /b 0
+if "%reg_choice%"=="5" (
+    cls
+    exit /b 0
+)
 echo Invalid choice. Please try again.
 goto menu
 

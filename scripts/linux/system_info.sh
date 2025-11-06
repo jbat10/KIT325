@@ -6,10 +6,6 @@
 TOOLKIT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 OUTPUT_DIR="$TOOLKIT_ROOT/output"
 
-echo "System Information Collection"
-echo "============================="
-echo
-
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 SYSINFO_DIR="$OUTPUT_DIR/system_info_$TIMESTAMP"
 mkdir -p "$SYSINFO_DIR"
@@ -177,3 +173,4 @@ echo "System information collection completed!"
 echo "Results saved to: $SYSINFO_DIR"
 echo
 read -p "Press Enter to continue..."
+clear
