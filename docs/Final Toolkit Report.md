@@ -31,11 +31,39 @@ A final test was included based on a suggestion from the second progress meeting
 ### Photorec
 
 From the SPDA document, the main testing criteria for Photorec is for the tool to be able to reconstruct files from unallocated space that match the contents of their original version. Whilst doing this, I also opted to ensure the tool works without issue on both windows and linux systems and when operating from a USB drive instead of the system itself. For the first test, a sample text file was created with an identifiable size and with easily recognizable contents. Once deleted, Photorec was able to recover the file and match it’s original content on both systems without issue, matching the files length and contents.
-![Photorec Test Passed](https://github.com/jbat10/KIT325/blob/main/docs/Images/PhotorecReportWin.PNG)
-![Photorec Test Passed](https://github.com/jbat10/KIT325/blob/main/docs/Images/PhotorecReportLin.PNG)
+![Photorec Test Passed](./Images/PhotorecReportWin.PNG)
+![Photorec Test Passed](./Images/PhotorecReportLin.PNG)
 *Above are the successfully recovered files from Photorec*
 
 For the second test, these results largely mirror the memory capture tools with their outcomes. The windows version functioned without issue from the USB drive, however the linux version needed extra modification to work without issue. 
+
+### dd and NTFSTools
+
+TBA
+
+### Bootable Linux Environment
+
+The bootable OS included in the toolkit was able to boot on real hardware. Secure boot did not need to be deactivated. By default, no non-toolkit partitions are mounted within the bootable OS, as Guymager and Autopsy are both capable of functioning on block devices, preventing accidental alteration of data on the target machine. Non-toolkit partitions *may* be mounted by the user if necessary, but as doing this is out-of-scope for the toolkit's intended operations it is left up to the user to act appropriately.
+
+### Guymager and Autopsy
+
+In testing the bootable environment, Guymager was able to create a dd image of a USB flash drive, which was then able to be opened and browsed in Autopsy as a data source. matching the original drive. This demonstrates that both tools are functional as installed in the toolkit, and satisfies the test case in the SPDA document. It was noted that attempting to create and open an E01 image would cause Autopsy to crash; Due to the opaqueness and complexity of the resulting crash log the cause of this could not be determined or resolved, however given the portable toolkit is unlikely to be used to analyse disk image files, only create images or analyse original disks, this is considered a minor issue.
+
+![guymager done imaging](./Images/guymagercomplete.png)
+
+![autopsy opening guymager image](./Images/autopsyopen.png)
+
+### Distribution
+
+After flashing the raw disk image of the bootable environment to a suitable USB drive using Balena Etcher, the toolkit could be booted. The installer script was able to create a new, labelled ExFAT partition in the remaining space on the drive containing this git repo, and the downloader script successfully downloaded and unpacked all remaining tools into their respective folders. This is verifiable by viewing the partition layout with the "lsblk" command on Linux or the Windows Partition Viewer, and inspecting the folder structure to verify all expected files are present.
+
+![partition layout after install](./Images/partitions.png)
+
+![files after download](./Images/postinstall.png)
+
+### Scripting
+
+TBA
 
 ## Packaging Decisions
 
