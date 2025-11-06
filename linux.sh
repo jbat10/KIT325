@@ -107,6 +107,7 @@ system_info_menu() {
 
 exit_toolkit() {
     clear
+    bash "scripts/linux/checksumgeneratorlin.sh"
     exit 0
 }
 
