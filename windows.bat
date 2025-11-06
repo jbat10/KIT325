@@ -132,4 +132,5 @@ if %errorLevel% neq 0 (
 
 :exit
 cls
+call "scripts\windows\checksumgenerator.bat"
 exit /b 0
