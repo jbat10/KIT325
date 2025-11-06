@@ -51,4 +51,4 @@ Economically, the tools contained are all open source or freely available, makin
 
 most tools won't work without running them with elevated permissions (running as administrator on windows, using sudo on Linux), which would heavily limit the functionality of the toolkit on devices without an accessible elevated account. 
 
-In a real world scenario, the outputs of all tools could use up all the storage on the allocated USB drive, causing issues when attempting a full acquisition of forensic evidence, especially if acquiring from a device with multiple drives. A future recommendation would be to use a USB drive with a larger storage to alleviate this issue, however having multiple sets of this toolkit could also work.
+In a real world scenario, the outputs of all tools could use up all the storage on the allocated USB drive, causing issues when attempting a full acquisition of forensic evidence, especially if acquiring from a device with multiple drives. 
