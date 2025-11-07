@@ -63,7 +63,9 @@ After flashing the raw disk image of the bootable environment to a suitable USB 
 
 ### Scripting
 
-TBA
+Scripting is a large component of the toolkit, intended to streamline the use of tools and provide an easy and simple interface for users to use the toolkit from. We created several wrapper scripts for each of the individual tools, as well as a master script (one for each Linux and Windows respectively) to call upon these scripts, letting all the evidence acquisition be done from this one interface point. This script also handles the output of the tools, providing subdirectories for each tool and timestamps to help categorize and sort evidence. 
+
+A checksum hashing script was also made to generate hashes of the output files, saving them in a stored sha256 file alongside them. With was done so the integrity of these files can be verified, and is called whenever the main script attempts to exit on either versions. 
 
 ## Packaging Decisions
 
