@@ -131,7 +131,7 @@ The script detects if running as root and displays appropriate warnings. Running
 File extraction uses rsync to preserve timestamps, permissions, and metadata for forensic integrity.
 
 **Hash Verification:**
-Disk images automatically generate MD5 and SHA256 hashes for integrity verification.
+Disk images automatically generate MD5 and SHA256 hashes for integrity verification, and SHA256 hashes are generated for all files in the `output/` folder upon exit.
 
 **Navigation:**
 After each tool completes, press Enter to return to the main menu.
@@ -143,3 +143,4 @@ After each tool completes, press Enter to return to the main menu.
 3. **Document your actions** - note what tools you ran and why
 4. **Check output directory** after each operation to verify success
 5. **Keep original evidence intact** - work on copies when possible
+6. **Don't forcibly exit/kill the scripts** - use the 'exit' menu option so that outputted files can be hashed
