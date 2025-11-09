@@ -27,6 +27,20 @@ For Linux systems, dd was chosen as the standard disk imaging tool due to its un
 
 Rather than relying on third-party tools, custom system information collection scripts were developed for both Windows and Linux environments. This approach was chosen to provide quick and comprehensive evidence gathering when time with the target system is limited. The scripts automate the collection of essential system context including running processes, network connections, user accounts, services, installed software, and hardware information. By creating a purpose-built solution, we ensured the toolkit could rapidly gather critical forensic context without dependencies on external tools, making it ideal for time-sensitive field acquisitions where understanding the system state is crucial for proper evidence interpretation.
 
+### Debian
+
+Debian was selected as the Linux distribution to base the toolkit's bootable environment on for a number of reasons. For one, Debian's long-term point-release update cycle is well suited to deployments that ideally do not need to be updated frequently, such as here. Debian also offers a high degree of modularity, allowing installations to be limited to only essential packages at install time, allowing the system to remain relatively lightweight, and offers a large choice of tools and desktop environments. On packaging, many forensic tools are available as .deb packages, while .rpm packages were seemingly significantly rarer, so this offered another reason to use a distribution in the Debian family. Finally, Debian is distributed with a Microsoft-signed EFI shim that allows it to boot on systems with secure boot enabled, without needing to enroll custom keys, meaning little-to-no alteration of a target device's firmware settings is needed to boot the toolkit's Linux environment. 
+
+Xfce was selected as the desktop environment due its notably low resource usage and disk size, allowing the toolkit to remain relatively lightweight, though this could be customised if desired. Replacing Thunar with Nautilus as the file manager was considered to provide thumbnailer sandboxing, adding a security layer should a toolkit user decide to browse a target disk with the file manager, however since this is not good practice forensically, and is a role Autopsy is capable of fulfilling better, it was decided that this use case was not worth downloading the additional dependencies for.
+
+### Guymager
+
+Guymager was selected for disk imaging in the bootable environment as it is a mature, open-source program with a focus on forensic applications, where many alternatives are either commercial or focused on creating regular backups; This forensic focus entails support for creation of EWF images and integrated hash generation and checking, both of which are useful to investigations. It also requires very few dependencies and is relatively small, fitting with the lightweight design of the toolkit.
+
+### Autopsy
+
+Autopsy is included primarily for performing file extraction, file carving and analysis of system configurations and logs from the bootable environment, and was selected over alternatives primarily because it is a single tool capable of filling all of those roles, thus simplifying both packaging/distribution and use by investigators. It is also very widely-used by forensic specialists, so users are likely to either have existing experience with it or gain valuable experience by using it here.
+
 ## Testing Results
 
 ### Main Menu Script
