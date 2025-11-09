@@ -9,6 +9,9 @@ Autopsy is accessible from a desktop shortcut on the bootable Linux environment 
 
 Work is stored in a "case", using a directory tree and database. Exported files and reports will be contained within their respective subdirectories. Generated reports may be of several formats, but HTML is generally preferred.
 
+## Note on System Requirements
+Certain features of Autopsy can be very resource-intensive. It is recommended not to use anything more than basic functionality unless more than 8GB of memory and a reasonably fast CPU is available on the target device.
+
 ## Step-by-step walkthrough
 
 1. Log into the toolkit's Linux OS and launch Autopsy with the shortcut on the desktop.
