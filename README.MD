@@ -2,6 +2,8 @@
 
 A lightweight, portable forensics toolkit designed for USB storage devices, focused on evidence acquisition and triage capabilities for both Windows and Linux systems.
 
+Repository available at https://github.com/jbat10/KIT325
+
 ## Installation
 To perform a full install, flash the toolkit disk image to a USB drive, boot into the newly flashed USB drive, open a terminal and run `./installer.sh` . This will install the rest of the toolkit into the remaining space on the USB drive. A USB 3.0 drive with 32GB of storage or better is required for full functionality.
 
@@ -11,7 +13,7 @@ To perform a partial install, format a USB flash drive to ExFAT and clone this r
 
 On a live system, run the master script for your platform:
 - **Windows:** `windows.bat` (run as Administrator)
-- **Linux:** `sudo bash linux.sh`
+- **Linux:** `bash linux.sh` (run as root or with sudo)
 
 [📖 Master Script Usage Guide](docs/Master%20Script%20Usage%20Guide.md)
 
